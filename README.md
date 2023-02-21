@@ -1,0 +1,53 @@
+# vagrant-shell-script
+
+
+O repositório em questão cria uma máquina virtualbox pelo Vagrant através do terminal do Linux. Essa máquina tem diversos pacotes:
+
+nginx
+vim
+curl
+telnet
+unzip
+wget
+net-tools
+htop
+nmap
+
+Além dos pacotes, foi definido o nome da máquina e criado um usuário. Tudo isso foi executado através do arquivo script.sh.
+
+
+Para executar esse projeto em sua máquina, é necessário clonar o repositório em sua máquina via chave SSH, com o comando:
+
+$ git add git@github.com:caiosampaio894/vagrant-shell-script.git
+
+Após isso é necessário acessar checar se a faixa do seu ip de rede está correta com o ip que foi colcado no arquivo Vagrantfile, caso não esteja, corrija.
+Para checar o ip da sua máquina:
+
+$ ip a
+
+Cheque também qual placa de rede sua máquina irá se conectar, retire o script do Vagrantfile:
+
+bridge: "enp2s0"
+
+Para corrigir o Vagrantfile:
+
+$ vim Vagrantfile
+
+insert
+
+Depois de checar seu ip, é necessário iniciar o repositório vagrant com o comando:
+
+$ vagrant init hashicorp/bionic64
+
+Após isso, se conecte com a sua chave ssh através do comando:
+
+$ vagrant ssh
+
+Suba a sua máquina virtual através do comando:
+
+$ vagrant up
+
+Veja qual opção de rede sua máquina lhe dará, adicione novamente o script no Vagrantfile:
+
+bridge: "enp2s0"
+
