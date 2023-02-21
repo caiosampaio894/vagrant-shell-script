@@ -1,14 +1,16 @@
 #!/bin/bash
 
 apt update
+VBoxManage createvm --name "vagrant-shell-script" --ostype "Debian_64"
+sudo usermod -a -G vboxusers $CAIO
 apt install -y nginx
 service nginx restart
-apt-get install -y vim-gtk3
-apt-get install -y exuberant-ctags
+apt install -y vim-gtk3
+apt install -y exuberant-ctags
 apt install -y curl
-yum -y install telnet
-apt-get install unzip
+apt install -y telnet
+apt install unzip
 apt install wget
-apt-get install net-tools
+apt install net-tools
 apt install htop
-apt-get install nmap
+apt install nmap
