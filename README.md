@@ -1,7 +1,7 @@
 # vagrant-shell-script
 
 
-O repositório em questão cria uma máquina virtualbox pelo Vagrant através do terminal do Linux. Essa máquina tem diversos pacotes:
+O repositório em questão cria uma máquina virtualbox pelo Vagrant através do terminal do Linux. Essa máquina tem diversos pacotes, que estão pré-configurados pelo arquivo script.sh:
 
 nginx
 vim
