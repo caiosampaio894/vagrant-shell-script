@@ -18,7 +18,7 @@ Além dos pacotes, foi definido o nome da máquina e criado um usuário. Tudo is
 
 Para executar esse projeto em sua máquina, é necessário clonar o repositório em sua máquina via chave SSH, com o comando:
 
-$ git add git@github.com:caiosampaio894/vagrant-shell-script.git
+$ git clone git@github.com:caiosampaio894/vagrant-shell-script.git
 
 Após isso é necessário acessar checar se a faixa do seu ip de rede está correta com o ip que foi colcado no arquivo Vagrantfile, caso não esteja, corrija.
 Para checar o ip da sua máquina:
@@ -35,17 +35,15 @@ $ vim Vagrantfile
 
 insert
 
-Depois de checar seu ip, é necessário iniciar o repositório vagrant com o comando:
+Suba a sua máquina virtual através do comando:
 
-$ vagrant init hashicorp/bionic64
+$ vagrant up
 
 Após isso, se conecte com a sua chave ssh através do comando:
 
 $ vagrant ssh
 
-Suba a sua máquina virtual através do comando:
 
-$ vagrant up
 
 Veja qual opção de rede sua máquina lhe dará, adicione novamente o script no Vagrantfile:
 
